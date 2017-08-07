@@ -4,13 +4,9 @@
 속성 유효성 검사
 ----------------
 
+
 ![](https://image.slidesharecdn.com/react-w3c-html-kig-170125044932/95/react-demo-15-638.jpg?cb=1485320719)
 
-> isRequired : 필수항목
-
-### 속성 기본값
-
-> defaultProps : 기본값 지정
 
 ```
 import React, { Component, PropTypes } from 'react';
@@ -35,12 +31,16 @@ Greeter.defaultProps = {
 render(<Greeter salutation="Hello World" />, document.getElementById('root'));
 ```
 
-### 기본 제공되는 propType 유효성 검사기
+> isRequired : 필수항목
 
+### 속성 기본값
+> defaultProps : 기본값 지정
+
+
+### 기본 제공되는 propType 유효성 검사기
 ### 칸반앱 : 속성 형식 정의
 
 ### 커스텀 propType 유효성 검사기
-
 ```
 import React, { Component, PropTypes } from 'react';
 import marked from 'marked';
@@ -78,21 +78,23 @@ class Card extends Component{
 ------------------------------
 
 ### 상태 저장 컴퍼넌트와 순수 컴퍼넌트
-
-- ** 속성(Props)** : 컴포넌트 구성정보, 상위 컴포넌트로부터 받고 변경할수 없음
-- ** 상태(Stats)** : 컴포넌트 생산자에 정의된 기본값에서 시작해 여러차레 변경가능, 상태가 변경될 때마다  컴퍼넌트가 다시 렌더링  
+-속성(Props) : 컴포넌트 구성정보, 상위 컴포넌트로부터 받고 변경할수 없음
+-상태(Stats) : 컴포넌트 생산자에 정의된 기본값에서 시작해 여러차레 변경가능, 상태가 변경될 때마다 컴퍼넌트가 다시 렌더링  
 
 ![](https://image.slidesharecdn.com/react-w3c-html-kig-170125044932/95/react-demo-16-638.jpg?cb=1485320719)
 
-### 어떤 컴퍼넌트가 상태 저장이어야 할까? 
-
+### 어떤 컴퍼넌트가 상태 저장이어야 할까?
 
 ### 데이터 흐름과 컴퍼넌트 통신
 
 컴퍼넌트 수명주기
+-----------------
 
-![](https://image.slidesharecdn.com/react-w3c-html-kig-170125044932/95/react-demo-17-638.jpg?cb=1485320719)
------------------------------------------------------------------------------------------------------------
+> 컴퍼넌트 수명주기의 특정시점에 자동으로 호출될 메서드를 선언 할수 있음
+> 각 수명주기 메서드가 수행하는 역할과 호출되는 순서를 이해하면 컴포넌트가 생성, 삭제될때 특정한 작업을 수행( 속성,상태 변경에 적절하게 대응)
+
+![ ](https://image.slidesharecdn.com/react-w3c-html-kig-170125044932/95/react-demo-17-638.jpg?cb=1485320719)
+ 
 
 ### 수명주기 단계와 메서드
 
