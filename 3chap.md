@@ -121,3 +121,6 @@ class Card extends Component{
 **컨테이너 컴포넌트** : 기존 컴포넌트에 데이터 가져오기 논리를 추가하는것이 아니고, 상태저장 컴포넌트를 새로 만든다.
 
 (ex)ContactsApp + ContactsAppContainer 추가
+
+
+https://codepen.io/Petoleju/pen/MeYyoO
