@@ -26,3 +26,7 @@
 ### 디스패치
 
 -	액션을 스토어에게 전달하는 과정을 조율하고 스토어의 액션 핸들러가 올바른 순서로 실행되는지 관리
+
+
+ Flux 로의 카툰안내서
+http://bestalign.github.io/2015/10/06/cartoon-guide-to-flux/
