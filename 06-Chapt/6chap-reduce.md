@@ -13,3 +13,7 @@
 -	**MapStore**: ReduceStore 의 변형으로서 단일 값이 아닌 키 값 쌍을 저장하는 추가 도우미 메서드를 포함
 
 -	ReduceStore 와 MapStore : 변경 이벤트를 수동으로 방출할 필요가 없음.(발송 전후 상태를 비교하고 변경이벤트를 방출하는 작업이 자동처리 )
+
+
+
+http://bestalign.github.io/2015/10/26/cartoon-intro-to-redux/
