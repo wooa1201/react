@@ -1,28 +1,14 @@
 import React, { Component }  from 'react' ;
 import {render} from 'react-dom';
+import {Container} from 'flux/utils' ;
 import BankBalanceStore from './BankBalanceStore' ;
+import BankRewardsStore from './BankRewardsStore' ;
 import BankActions from './BankActions' ;
-
 
 class App extends Component{
   constructor(){
          super(...arguments);
          BankActions.createAccount()  ;
-
-         this.state ={
-           balance : BankBalanceStore.getState()
-         }
-  }
-  componentDidMount(){
-    this.storeSubScription = BankBalanceStore.addListener(data => this.handleStoreChange(data))  ;
-  }
-
-  componentWillUnmount(){
-    this.storeSubScription.remove() ;
-  }
-
-  handleStoreChange(){
-    this.setState({balance:BankBalanceStore.getState()}) ;
   }
 
   deposit(){
@@ -40,7 +26,8 @@ class App extends Component{
        <div>
           <header> FLUXTRUST BANK </header>
 
-           <h1>Your balance is ${(this.state.balance)}</h1>
+           <h1>Your balance is $ {this.state.balance}</h1>
+           <h1>Your Point Rewards Tier  is {this.state.rewardsTier }</h1>
           <div className="atm">
               <input type="text" placeholder="Enter Ammount" ref="amount" />
              <br />
@@ -52,4 +39,11 @@ class App extends Component{
 }
 }
 
-render(<App />, document.getElementById('root'))   ;
+App.getStores = () => ([BankBalanceStore, BankRewardsStore ]);
+App.calculateState = (prevState) =>({
+   balance:BankBalanceStore.getState() ,
+   rewardsTier : BankRewardsStore.getState()
+ });
+
+const AppContainer = Container.create(App) ;
+render(<AppContainer />, document.getElementById('root'))   ;

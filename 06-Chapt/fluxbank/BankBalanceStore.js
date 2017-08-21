@@ -7,7 +7,7 @@ let _emitter = new EventEmitter();
 let balance = 0 ;
 
 let BankBalanceStore ={
-    getStore(){
+    getState(){
        return balance ;
     }  ,
     addListener(callback) {
